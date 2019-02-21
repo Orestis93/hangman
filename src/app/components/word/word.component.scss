@@ -1,0 +1,62 @@
+.inactive{
+    color:gray;
+}
+
+.notguessed{
+    background-color: #5f0905;
+    color: white;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 26px;
+    display: flex;
+}
+.guessed {
+    color: white;
+    border-radius: 15px;
+    padding: 17px;
+    font-size: 22px;
+    background-color: #5f0905;
+    -webkit-transition:  1s; /* Safari */
+    transition:  1s;
+  
+}
+.guess-word {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:50%;
+}
+.letterlength{
+    font-size: 2.0rem;
+    color: #5f0905;
+    }
+.warning{
+    color:red;
+}
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+* {
+    text-align: center;
+  }
+  .letters{
+      background-color: gray;
+  }
+  .secretWord {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+
+  .mainlayout{
+    animation-name: fadeIn;
+    animation-duration: 4s;
+    border-radius:10px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:#976c3d;
+  }
+  
+  
+

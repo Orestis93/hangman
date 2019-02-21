@@ -1,0 +1,9 @@
+.hang{
+    width: 90%;
+    position: relative;
+    z-index: 9;
+}
+.hanglayout{
+    float:right;
+    min-width: 25%;
+}

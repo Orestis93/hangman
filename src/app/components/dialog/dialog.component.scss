@@ -1,0 +1,58 @@
+.dark-modal .modal-content {
+  background-color: #292b2c;
+  color: white;
+}
+.dark-modal .close {
+  color: white;
+}
+.light-blue-backdrop {
+  background-color: #5cb3fd;
+}
+.modalayout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal{
+  opacity: 1;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  border: 1px solid red;
+  color: white;
+  background: #840606;
+  border: none;
+  border-radius: 22px;
+  width: 30%;
+  text-align: center;
+
+  button {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: bold;
+    background:transparent;
+    color:white;
+    border-radius:40px;
+    border: 2px solid white;
+    padding: 20px;
+  }
+
+  button:hover {
+    color:darken(gold, 5%);
+    border-color: darken(gold, 5%);
+  }
+  p {
+    font-size: 32px;
+    color: white;
+  }
+  
+  h2 {
+      font-size: 40px;
+      color:white;
+  }
+  
+ 
+
+}
