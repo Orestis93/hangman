@@ -1,0 +1,41 @@
+<div class="mainlayout">
+  <app-header [rounds]="rounds"></app-header>
+<mat-card>
+    <app-hang [tries]="tries"></app-hang>
+  <mat-card-content >
+      <div class="letterlength">
+          <span>The word you are guessing contains {{ secretWordObjectLength}} letters.</span>
+      </div>
+        <br/><br/>
+    <div class="guess-word">     
+      <div *ngFor="let secret of secretWordObject" [ngClass]="{guessed: GuessedCorrect(secret)}" >
+          <span *ngIf="GuessedCorrect(secret)">{{secret}}</span>
+          <span class="notguessed" *ngIf="!GuessedCorrect(secret)">_</span>
+      </div>
+     </div>
+
+  </mat-card-content>
+ 
+</mat-card>
+<mat-card>
+
+  <mat-card-content>
+
+    <mat-card-actions class="center">
+        <span *ngFor="let userinput of letters; let i = index">
+          <button mat-fab color="accent" (click)="checkGuessedLetter(userinput);"  [disabled]="userinput.chosen" >{{userinput.name}}</button>
+        </span>
+    </mat-card-actions>
+           <br/>
+      <div class="center">
+        <div class="secretWord" [ngClass]="{'warning':tries < 3}">
+                    Tries Remaining:  {{tries}}
+         </div>
+    
+       </div>
+  </mat-card-content>
+</mat-card>
+
+<app-dialog [modalText]="modalText" [secretWordObject]="secretWordObject" (myEvent)="newGame()"></app-dialog>
+<app-footer [missedLetters]="missedLetters"></app-footer>  
+</div>
